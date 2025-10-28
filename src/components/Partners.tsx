@@ -1,19 +1,41 @@
 import React from 'react';
 import { useTranslation } from '../hooks/useTranslation';
-import fourSeasonsLogo from '../assets/partners/four-seasons.png';
+import partner1Logo from '../assets/partners/partner-1.png';
+import partner2Logo from '../assets/partners/partner-2.png';
+import partner3Logo from '../assets/partners/partner-3.png';
+import partner4Logo from '../assets/partners/partner-4.jpg';
+import partner5Logo from '../assets/partners/partner-5.png';
 import ritzCarltonLogo from '../assets/partners/ritz-carlton.png';
 import marriottLogo from '../assets/partners/marriott.png';
 import hiltonLogo from '../assets/partners/hilton.png';
 import hyattLogo from '../assets/partners/hyatt.png';
 import ihgLogo from '../assets/partners/ihg.png';
-import waldorfLogo from '../assets/partners/waldorf.png';
-import stRegisLogo from '../assets/partners/st-regis.png';
 
 const partners = [
   { 
-    name: 'Four Seasons', 
-    logo: fourSeasonsLogo,
-    alt: 'Four Seasons Hotels and Resorts'
+    name: 'Partner 1', 
+    logo: partner1Logo,
+    alt: 'Partner 1'
+  },
+  { 
+    name: 'Partner 2', 
+    logo: partner2Logo,
+    alt: 'Partner 2'
+  },
+  { 
+    name: 'Partner 3', 
+    logo: partner3Logo,
+    alt: 'Partner 3'
+  },
+  { 
+    name: 'Partner 4', 
+    logo: partner4Logo,
+    alt: 'Partner 4'
+  },
+  { 
+    name: 'Partner 5', 
+    logo: partner5Logo,
+    alt: 'Partner 5'
   },
   { 
     name: 'Ritz-Carlton', 
@@ -39,16 +61,6 @@ const partners = [
     name: 'InterContinental', 
     logo: ihgLogo,
     alt: 'InterContinental Hotels Group'
-  },
-  { 
-    name: 'Waldorf Astoria', 
-    logo: waldorfLogo,
-    alt: 'Waldorf Astoria'
-  },
-  { 
-    name: 'St. Regis', 
-    logo: stRegisLogo,
-    alt: 'St. Regis Hotels & Resorts'
   },
 ];
 
@@ -111,7 +123,7 @@ const Partners: React.FC = () => {
                 <img 
                   src={partner.logo} 
                   alt={partner.alt}
-                  className="w-full h-auto max-h-12 sm:max-h-14 md:max-h-16 lg:max-h-20 object-contain transition-all duration-300"
+                  className="w-full h-16 object-contain transition-all duration-300"
                   loading="lazy"
                 />
               </div>

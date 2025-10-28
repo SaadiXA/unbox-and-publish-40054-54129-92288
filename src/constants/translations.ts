@@ -175,7 +175,7 @@ export const translations = {
       address: 'Address',
     },
     footer: {
-      about: 'VIP GATE is your gateway to luxury travel. VIP Gate is a specialized platform dedicated to providing luxury travel, transportation, and hospitality solutions, carefully designed to meet the requirements of the elite.',
+      about: 'VIP Gate is an innovative and pioneering concept to provide the best solutions for all travel needs worldwide, around the clock.',
       links: 'Quick Links',
       contact_info: 'Contact Us',
     },
@@ -363,7 +363,7 @@ export const translations = {
       address: 'العنوان',
     },
     footer: {
-      about: 'VIP GATE هي بوابتك إلى السفر الفاخر. بوابة كبار الشخصيات هي منصّة متخصصة في تقديم حلول سفرات و تنقّل وضيافة فاخرة، تم تصميمها بعناية لتلبية متطلبات الصفوة.',
+      about: 'بوابة كبار الشخصيات هي مفهوم مبتكر ورائد لتوفير أفضل الحلول لجميع احتياجات السفر إلى جميع أنحاء العالم وعلى مدار الساعة',
       links: 'روابط سريعة',
       contact_info: 'اتصل بنا',
     },
