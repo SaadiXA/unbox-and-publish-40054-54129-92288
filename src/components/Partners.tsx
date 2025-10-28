@@ -116,7 +116,7 @@ const Partners: React.FC = () => {
             {partners.map((partner, index) => (
               <div 
                 key={index} 
-                className="partner-logo-container flex justify-center items-center bg-card/50 backdrop-blur-sm rounded-lg p-4 sm:p-6 md:p-8 border border-border/50 hover:border-primary transition-all duration-300 hover:bg-card hover:shadow-lg hover:shadow-primary/20" 
+                className="partner-logo-container flex justify-center items-center bg-white/90 backdrop-blur-sm rounded-lg p-4 sm:p-6 md:p-8 border border-border/50 hover:border-primary transition-all duration-300 hover:bg-white hover:shadow-lg hover:shadow-primary/20" 
                 data-aos="zoom-in" 
                 data-aos-delay={index * 100}
               >
