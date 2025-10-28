@@ -38,7 +38,7 @@ const Header: React.FC = () => {
   ];
 
   return (
-    <header className="bg-gray-900/95 backdrop-blur-md sticky top-0 z-50 border-b border-gray-800 w-full">
+    <header className="bg-gray-900 backdrop-blur-md fixed top-0 left-0 right-0 z-50 border-b border-gray-800 w-full shadow-lg">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-full">
         <div className="flex items-center justify-between h-16">
           <NavLink to="/" className="flex items-center">
@@ -90,7 +90,7 @@ const Header: React.FC = () => {
         {/* Mobile Menu Backdrop */}
         {isMenuOpen && (
           <div 
-            className="md:hidden fixed inset-0 bg-black/70 backdrop-blur-sm animate-fade-in"
+            className="md:hidden fixed inset-0 bg-black/80 backdrop-blur-sm animate-fade-in"
             style={{ top: '64px', zIndex: 40 }}
             onClick={() => setIsMenuOpen(false)}
           />
@@ -98,7 +98,7 @@ const Header: React.FC = () => {
 
         {/* Mobile Menu - Full Width Dropdown */}
         <div 
-          className={`md:hidden fixed left-0 right-0 bg-gray-900/98 backdrop-blur-xl border-b border-gray-800 shadow-2xl overflow-hidden transition-all duration-500 ease-out ${
+          className={`md:hidden fixed left-0 right-0 bg-gray-900 border-b border-gray-800 shadow-2xl overflow-hidden transition-all duration-500 ease-out ${
             isMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
           }`}
           style={{ top: '64px', zIndex: 50 }}
