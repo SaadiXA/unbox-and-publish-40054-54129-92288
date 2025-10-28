@@ -5,7 +5,7 @@ import partner2Logo from '../assets/partners/partner-2.png';
 import partner3Logo from '../assets/partners/partner-3.png';
 import partner4Logo from '../assets/partners/partner-4.jpg';
 import partner5Logo from '../assets/partners/partner-5.png';
-import ritzCarltonLogo from '../assets/partners/ritz-carlton.png';
+import fourSeasonsLogo from '../assets/partners/four-seasons.png';
 import marriottLogo from '../assets/partners/marriott.png';
 import hiltonLogo from '../assets/partners/hilton.png';
 import hyattLogo from '../assets/partners/hyatt.png';
@@ -38,9 +38,9 @@ const partners = [
     alt: 'Partner 5'
   },
   { 
-    name: 'Ritz-Carlton', 
-    logo: ritzCarltonLogo,
-    alt: 'The Ritz-Carlton'
+    name: 'Four Seasons', 
+    logo: fourSeasonsLogo,
+    alt: 'Four Seasons Hotels and Resorts'
   },
   { 
     name: 'Marriott', 
@@ -116,7 +116,7 @@ const Partners: React.FC = () => {
             {partners.map((partner, index) => (
               <div 
                 key={index} 
-                className="partner-logo-container flex justify-center items-center bg-white/90 backdrop-blur-sm rounded-lg p-4 sm:p-6 md:p-8 border border-gray-300/50 hover:border-[var(--gold)] transition-all duration-300 hover:bg-white hover:shadow-lg hover:shadow-[var(--gold)]/20" 
+                className="partner-logo-container flex justify-center items-center bg-card/50 backdrop-blur-sm rounded-lg p-4 sm:p-6 md:p-8 border border-border/50 hover:border-primary transition-all duration-300 hover:bg-card hover:shadow-lg hover:shadow-primary/20" 
                 data-aos="zoom-in" 
                 data-aos-delay={index * 100}
               >
