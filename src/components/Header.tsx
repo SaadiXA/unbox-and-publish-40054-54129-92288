@@ -90,35 +90,44 @@ const Header: React.FC = () => {
         {/* Mobile Menu Backdrop */}
         {isMenuOpen && (
           <div 
-            className="md:hidden fixed inset-0 bg-black/50 backdrop-blur-sm"
+            className="md:hidden fixed inset-0 bg-black/70 backdrop-blur-sm animate-fade-in"
             style={{ top: '64px', zIndex: 40 }}
             onClick={() => setIsMenuOpen(false)}
           />
         )}
 
-        {/* Mobile Menu */}
-        {isMenuOpen && (
-          <nav className="md:hidden fixed right-0 rtl:right-auto rtl:left-0 top-16 bottom-0 w-64 bg-gray-900/98 backdrop-blur-lg border-l rtl:border-l-0 rtl:border-r border-gray-800 overflow-y-auto shadow-2xl" style={{ zIndex: 50 }}>
-            <div className="py-6 space-y-1 px-3">
-              {navLinks.map((link) => (
+        {/* Mobile Menu - Full Width Dropdown */}
+        <div 
+          className={`md:hidden fixed left-0 right-0 bg-gray-900/98 backdrop-blur-xl border-b border-gray-800 shadow-2xl overflow-hidden transition-all duration-500 ease-out ${
+            isMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
+          }`}
+          style={{ top: '64px', zIndex: 50 }}
+        >
+          <nav className="container mx-auto px-6 py-8">
+            <div className="space-y-2">
+              {navLinks.map((link, index) => (
                 <NavLink
                   key={link.path}
                   to={link.path}
                   onClick={() => setIsMenuOpen(false)}
                   className={({ isActive }) =>
-                    `block py-3 px-4 rounded-md text-base font-medium transition-all duration-300 ${
+                    `block py-4 px-6 text-lg font-medium transition-all duration-300 rounded-lg ${
                       isActive
-                        ? 'text-[hsl(var(--gold))] bg-gray-800/70 border-l-2 rtl:border-l-0 rtl:border-r-2 border-[hsl(var(--gold))]'
-                        : 'text-gray-300 hover:text-[hsl(var(--gold))] hover:bg-gray-800/50 hover:border-l-2 rtl:hover:border-l-0 rtl:hover:border-r-2 hover:border-[hsl(var(--gold))]/50'
+                        ? 'text-[hsl(var(--gold))] bg-gray-800/80 border-l-4 rtl:border-l-0 rtl:border-r-4 border-[hsl(var(--gold))] shadow-lg'
+                        : 'text-gray-200 hover:text-[hsl(var(--gold))] hover:bg-gray-800/50 hover:translate-x-2 rtl:hover:-translate-x-2'
                     }`
                   }
+                  style={{
+                    animationDelay: `${index * 50}ms`,
+                    animation: isMenuOpen ? 'fade-in 0.3s ease-out forwards' : 'none'
+                  }}
                 >
                   {link.label}
                 </NavLink>
               ))}
             </div>
           </nav>
-        )}
+        </div>
       </div>
     </header>
   );
