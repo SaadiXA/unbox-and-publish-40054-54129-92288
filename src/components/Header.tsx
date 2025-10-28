@@ -42,7 +42,7 @@ const Header: React.FC = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-full">
         <div className="flex items-center justify-between h-16">
           <NavLink to="/" className="flex items-center">
-            <VipGateLogo className="h-8 w-auto" />
+            <VipGateLogo className="h-12 w-auto" />
           </NavLink>
 
           {/* Desktop Navigation */}
@@ -90,15 +90,15 @@ const Header: React.FC = () => {
         {/* Mobile Menu Backdrop */}
         {isMenuOpen && (
           <div 
-            className="md:hidden fixed inset-0 bg-black/50 z-40 backdrop-blur-sm"
+            className="md:hidden fixed inset-0 bg-black/50 backdrop-blur-sm"
+            style={{ top: '64px', zIndex: 40 }}
             onClick={() => setIsMenuOpen(false)}
-            style={{ top: '64px' }}
           />
         )}
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <nav className="md:hidden fixed right-0 top-16 bottom-0 w-64 bg-gray-900/98 backdrop-blur-lg border-l border-gray-800 z-50 overflow-y-auto shadow-2xl">
+          <nav className="md:hidden fixed right-0 rtl:right-auto rtl:left-0 top-16 bottom-0 w-64 bg-gray-900/98 backdrop-blur-lg border-l rtl:border-l-0 rtl:border-r border-gray-800 overflow-y-auto shadow-2xl" style={{ zIndex: 50 }}>
             <div className="py-6 space-y-1 px-3">
               {navLinks.map((link) => (
                 <NavLink
@@ -108,8 +108,8 @@ const Header: React.FC = () => {
                   className={({ isActive }) =>
                     `block py-3 px-4 rounded-md text-base font-medium transition-all duration-300 ${
                       isActive
-                        ? 'text-[hsl(var(--gold))] bg-gray-800/70 border-l-2 border-[hsl(var(--gold))]'
-                        : 'text-gray-300 hover:text-[hsl(var(--gold))] hover:bg-gray-800/50 hover:border-l-2 hover:border-[hsl(var(--gold))]/50'
+                        ? 'text-[hsl(var(--gold))] bg-gray-800/70 border-l-2 rtl:border-l-0 rtl:border-r-2 border-[hsl(var(--gold))]'
+                        : 'text-gray-300 hover:text-[hsl(var(--gold))] hover:bg-gray-800/50 hover:border-l-2 rtl:hover:border-l-0 rtl:hover:border-r-2 hover:border-[hsl(var(--gold))]/50'
                     }`
                   }
                 >
